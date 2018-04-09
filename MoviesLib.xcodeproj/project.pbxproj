@@ -46,6 +46,9 @@
 		0778E3C01E88EECC00BF38C5 /* suicidesquad-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0778E3A61E88EECC00BF38C5 /* suicidesquad-wide.jpg */; };
 		0778E3C11E88EECC00BF38C5 /* sully-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0778E3A71E88EECC00BF38C5 /* sully-small.jpg */; };
 		0778E3C21E88EECC00BF38C5 /* sully-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0778E3A81E88EECC00BF38C5 /* sully-wide.jpg */; };
+		AC168A2D207C226200A6846C /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC168A2B207C226200A6846C /* MoviesLib.xcdatamodeld */; };
+		AC168A2F207C274500A6846C /* MovieRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC168A2E207C274500A6846C /* MovieRegisterViewController.swift */; };
+		AC168A31207C275A00A6846C /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC168A30207C275A00A6846C /* CategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		0778E3A61E88EECC00BF38C5 /* suicidesquad-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "suicidesquad-wide.jpg"; sourceTree = "<group>"; };
 		0778E3A71E88EECC00BF38C5 /* sully-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sully-small.jpg"; sourceTree = "<group>"; };
 		0778E3A81E88EECC00BF38C5 /* sully-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sully-wide.jpg"; sourceTree = "<group>"; };
+		AC168A2C207C226200A6846C /* MoviesLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLib.xcdatamodel; sourceTree = "<group>"; };
+		AC168A2E207C274500A6846C /* MovieRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRegisterViewController.swift; sourceTree = "<group>"; };
+		AC168A30207C275A00A6846C /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 				07F694841E9238D10069C0CE /* Theater */,
 				07780D4C1E6D860E00BC3630 /* AppDelegate.swift */,
 				07780D501E6D860E00BC3630 /* Main.storyboard */,
+				AC168A2E207C274500A6846C /* MovieRegisterViewController.swift */,
+				AC168A30207C275A00A6846C /* CategoriesViewController.swift */,
+				AC168A2B207C226200A6846C /* MoviesLib.xcdatamodeld */,
 				07780D531E6D860E00BC3630 /* Assets.xcassets */,
 				07780D551E6D860E00BC3630 /* LaunchScreen.storyboard */,
 				07780D581E6D860E00BC3630 /* Info.plist */,
@@ -230,6 +239,7 @@
 				TargetAttributes = {
 					07780D481E6D860E00BC3630 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -304,8 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0778E3711E88D4DB00BF38C5 /* MovieTableViewCell.swift in Sources */,
+				AC168A31207C275A00A6846C /* CategoriesViewController.swift in Sources */,
 				070FD18F1E898D7D00418783 /* WebViewController.swift in Sources */,
+				AC168A2D207C226200A6846C /* MoviesLib.xcdatamodeld in Sources */,
 				0703AD971E8553B2001FB5FD /* MoviesTableViewController.swift in Sources */,
+				AC168A2F207C274500A6846C /* MovieRegisterViewController.swift in Sources */,
 				070FD18D1E8957BD00418783 /* TheaterAnnotation.swift in Sources */,
 				07780D4F1E6D860E00BC3630 /* MovieViewController.swift in Sources */,
 				070FD18B1E89185F00418783 /* Theater.swift in Sources */,
@@ -435,7 +448,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericbrito.MoviesLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -447,7 +461,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericbrito.MoviesLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -473,6 +488,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC168A2B207C226200A6846C /* MoviesLib.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC168A2C207C226200A6846C /* MoviesLib.xcdatamodel */,
+			);
+			currentVersion = AC168A2C207C226200A6846C /* MoviesLib.xcdatamodel */;
+			path = MoviesLib.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 07780D411E6D860E00BC3630 /* Project object */;
 }
