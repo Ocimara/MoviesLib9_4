@@ -449,6 +449,9 @@
                                 <state key="normal" title="Fechar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="close:" destination="hbr-2B-Ggk" eventType="touchUpInside" id="p8e-5O-7d1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdW-Mh-dxw">
                                 <rect key="frame" x="16" y="518" width="288" height="30"/>
@@ -457,6 +460,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="AddUpdateMovie:" destination="hbr-2B-Ggk" eventType="touchUpInside" id="zxl-Lk-9rt"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-w9-uIT">
                                 <rect key="frame" x="16" y="307" width="288" height="203"/>
@@ -470,6 +476,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro de Filmes" id="oyN-mt-K1h"/>
                     <connections>
+                        <outlet property="AddUpdateMovie" destination="tdW-Mh-dxw" id="DnJ-ZW-4cJ"/>
                         <outlet property="btAddUpdate" destination="tdW-Mh-dxw" id="0ab-AH-N0E"/>
                         <outlet property="ivPoster" destination="IWR-eS-vIY" id="LO8-Aw-0Eh"/>
                         <outlet property="lbCategories" destination="rby-pR-QKA" id="eMx-SZ-Zs8"/>
@@ -524,14 +531,25 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Categorias" id="sbx-XI-scX">
-                                        <barButtonItem key="leftBarButtonItem" title="Fechar" id="f6r-7k-ZF6"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bTy-up-gUH"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Fechar" id="f6r-7k-ZF6">
+                                            <connections>
+                                                <action selector="close:" destination="NI8-EL-7ye" id="i6T-bR-yMl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bTy-up-gUH">
+                                            <connections>
+                                                <action selector="add:" destination="NI8-EL-7ye" id="pJD-gw-jQz"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="NSE-TS-hhe" id="Cla-IU-l31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdl-Jx-OLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

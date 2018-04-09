@@ -20,9 +20,21 @@ class MovieRegisterViewController: UIViewController {
     @IBOutlet weak var btAddUpdate: UIButton!
     
     
+    var movie: Movie!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if movie != nil {
+            tfTitle.text = movie.title
+            tfRating.text = "\(movie.rating)"
+            tfDuration.text = movie.duration
+            tvSummary.text = movie.summary
+            btAddUpdate.setTitle("Atualizar", for: .normal)
+        }
+        else
+        {
+            btAddUpdate.setTitle("Adicionar", for: .normal)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -41,5 +53,29 @@ class MovieRegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - IBActions
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func AddUpdateMovie(_ sender: UIButton) {
+        if movie == nil {
+            movie = Movie(context: context)
+        }
+            movie.title = tfTitle.text
+            movie.rating = Double(tfRating.text!)!
+            movie.duration = tfDuration.text
+            movie.summary = tvSummary.text
+        do {
+        try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        
+    }
+    
 
 }

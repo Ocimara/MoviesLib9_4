@@ -10,6 +10,11 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +37,11 @@ class CategoriesViewController: UIViewController {
     }
     */
 
+    @IBAction func close(_ sender: UIBarButtonItem) {
+    
+    }
+    
+    @IBAction func add(_ sender: Any) {
+    
+    }
 }
