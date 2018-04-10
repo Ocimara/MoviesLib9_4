@@ -70,6 +70,10 @@ class MovieRegisterViewController: UIViewController {
             movie.summary = tvSummary.text
         do {
         try context.save()
+            
+
+            close(sender)
+            
         } catch {
             print(error.localizedDescription)
         }

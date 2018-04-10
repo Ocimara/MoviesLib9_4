@@ -45,10 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - CoreData Stack
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "MoviesLib")
-        container.loadPersistentStores(completionHandler: { (storeDesciption, error)
+        container.loadPersistentStores(completionHandler: {
+            (storeDesciption, error)
             in
-            
-            
         })
         return container
     }()

@@ -31,6 +31,9 @@ class MoviesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MovieViewController {
+            vc.movie = fetchedResultController.object(at: tableView.indexPathForSelectedRow!)
+        }
     }
     
     func loadMovies() {
@@ -48,7 +51,6 @@ class MoviesTableViewController: UITableViewController {
         }
         
     }
-    
     
     
     // MARK: - Table view data source
@@ -88,7 +90,6 @@ class MoviesTableViewController: UITableViewController {
         cell.lbRating.text = "\(movie.rating)"
         cell.lbSummary.text = movie.summary
         
-        
         return cell
     }
     
@@ -101,16 +102,24 @@ class MoviesTableViewController: UITableViewController {
      */
     
     // Override to support editing the table view.
-    /*
+ 
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            let movie = fetchedResultController.object(at: indexPath)
+            
+            do {
+            context.delete(movie)
+            try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            
+        }
      }
-     }
-     */
+
     
     /*
      // Override to support rearranging the table view.
@@ -138,3 +147,28 @@ class MoviesTableViewController: UITableViewController {
      */
     
 }
+
+
+extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        
+        tableView.reloadData()
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

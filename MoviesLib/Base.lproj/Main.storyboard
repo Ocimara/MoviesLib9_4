@@ -476,7 +476,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro de Filmes" id="oyN-mt-K1h"/>
                     <connections>
-                        <outlet property="AddUpdateMovie" destination="tdW-Mh-dxw" id="DnJ-ZW-4cJ"/>
                         <outlet property="btAddUpdate" destination="tdW-Mh-dxw" id="0ab-AH-N0E"/>
                         <outlet property="ivPoster" destination="IWR-eS-vIY" id="LO8-Aw-0Eh"/>
                         <outlet property="lbCategories" destination="rby-pR-QKA" id="eMx-SZ-Zs8"/>
@@ -583,6 +582,6 @@
         <image name="theaters" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hxI-DG-Vf1"/>
+        <segue reference="CRz-Sl-afI"/>
     </inferredMetricsTieBreakers>
 </document>
